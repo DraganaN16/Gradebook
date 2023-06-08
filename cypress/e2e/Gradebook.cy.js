@@ -15,8 +15,8 @@ before(() => {
     cy.clearAllSessionStorage()
   })
 
-beforeEach(() => {
-    cy.visit("register");
+beforeEach(() => {  //ukviru describe bloka, pre svega
+    cy.visit("login");
   })
 
   afterEach(() =>{
@@ -24,6 +24,7 @@ beforeEach(() => {
   })
 
   describe("Register page - PO", () => {
+
     it("Registration with valid credentials", () => {
       cy.get("#first_name").type("Pera");
       cy.get("#last_name").type("Peric");
